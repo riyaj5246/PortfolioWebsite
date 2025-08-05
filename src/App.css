@@ -1,0 +1,207 @@
+:root {
+  --coral: #e06c75;
+  --teal: #61afef;
+  --text: #dcdfe4;
+  --bg: #13131c;
+  --muted: #6c7086;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  margin-bottom: 10%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--bg);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Full-width container */
+.container {
+  width: 100vw;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Profile section */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--teal);
+  object-fit: cover;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--coral);
+  margin: 0;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Links */
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a {
+  background-color: transparent;
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--teal);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  background-color: var(--teal);
+  color: var(--bg);
+}
+
+/* Section headings */
+h2 {
+  font-size: 1.75rem;
+  color: var(--teal);
+  border-bottom: 2px solid var(--teal);
+  padding-bottom: 0.25rem;
+  margin-top: 3rem;
+}
+
+/* Experience / Projects / Text content */
+section {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: var(--coral);
+  margin-bottom: 0.25rem;
+}
+
+h1 {
+  margin-bottom: -0.5rem;
+  font-weight: 900;
+  font-size: 400%;
+}
+p {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+  flex-wrap: nowrap; /* prevent wrapping to keep layout horizontal */
+  
+  /* Responsive height scaling with limits */
+  height: 40vw;             /* scales with viewport width */
+  min-height: 120px;        /* minimum height */
+  max-height: 240px;        /* maximum height */
+  padding-bottom: 1rem;     /* spacing below header to separate from next content */
+}
+
+.profile-image {
+  height: 100%;
+  width: auto;          /* keep aspect ratio, but we want square so: */
+  aspect-ratio: 1 / 1;  /* enforces square shape */
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid var(--teal);
+}
+
+.profile-content {
+  flex: 1;
+  min-width: 250px;
+  
+  /* Add some vertical padding/margin to avoid congestion */
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  body {
+    padding-bottom: 50%;
+  }
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    height: auto;          /* Let height grow with content */
+    padding-bottom: 150%;  /* More breathing room below */
+  }
+
+  .profile-image {
+    width: 50%;
+    height: auto;
+    aspect-ratio: auto;    /* remove square constraint */
+    max-width: 180px;      /* optional max size */
+  }
+
+  .profile-content {
+    width: 100%;           /* full width for text */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .links {
+    justify-content: center;
+    width: 100%;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+}
+
+
+.fun-description {
+  color: var(--text);
+  margin-top: 0.5rem;
+  font-style: italic;
+  max-width: 600px;
+}
