@@ -17,7 +17,7 @@ function App() {
             BS/MCS in Computer Science @ UIUC 
           </p>
           <p className="fun-description">
-            Hi! I'm a software engineer from Chicago studying at UIUC. I'm currently interning at IMC Trading, and prior to this, worked at SIG and Shedd Capital.
+            Hi! I'm a computer science student from Chicago studying at UIUC. I'm currently interning at IMC Trading, and prior to this, worked at SIG and Shedd Capital.
           </p>
           <p className="fun-description">
             I'm driven by opportunities to innovate in fast-paced & collaborative environments. I'm excited to apply cutting-edge tech to other 
